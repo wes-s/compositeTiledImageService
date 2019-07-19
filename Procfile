@@ -1,1 +1,1 @@
-web gunicorn app:imageGetter
+web gunicorn app:app
