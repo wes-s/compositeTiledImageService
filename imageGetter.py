@@ -1,9 +1,9 @@
 from flask import Flask, request
 from flask_restful import Api, Resource, reqparse
+from flask import send_file
 from PIL import Image
 import requests
 from io import BytesIO
-from flask import send_file
 
 app = Flask(__name__)
 api = Api(app)
