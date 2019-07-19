@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mapsource inline="true" version="8.2">
+  <connection api-version="2" class="OpenStreetMap" indicator-server='https://your-heroku-app-name-here.herokuapp.com' layer-separator="," max-stretch="1.2" min-shrink="0.667" offline="" port="443" server='https://your-heroku-app-name-here.herokuapp.com' url-format='/getImage/{L}?coord={Z},{Y},{X}'/>
+  <layers>
+    <layer display-name="World Reference Overlay"          name="World_Reference_Overlay"       show-ui="true" type="features" request-string="services.arcgisonline.com:arcgis:rest:services:Reference:World_Reference_Overlay:MapServer:tile" />
+    <layer display-name="World Physical Map"               name="World_Physical_Map"            show-ui="true" type="features" request-string="services.arcgisonline.com:arcgis:rest:services:World_Physical_Map:MapServer:tile" />
+    <layer display-name="World Street Map"                 name="World_Street_Map"              show-ui="true" type="features" request-string="services.arcgisonline.com:arcgis:rest:services:World_Street_Map:MapServer:tile" />
+    <layer display-name="World Dark Gray Reference"        name="World_Dark_Gray_Reference"     show-ui="true" type="features" request-string="services.arcgisonline.com:arcgis:rest:services:Canvas:World_Dark_Gray_Reference:MapServer:tile" />
+    <layer display-name="World Dark Gray Base"             name="World_Dark_Gray_Base"          show-ui="true" type="features" request-string="services.arcgisonline.com:arcgis:rest:services:Canvas:World_Dark_Gray_Base:MapServer:tile" />
+    <layer display-name="World Imagery"                    name="World_Imagery"                 show-ui="true" type="features" request-string="services.arcgisonline.com:arcGIS:rest:services:World_Imagery:MapServer:tile" />
+
+  </layers>
+  <properties />
+  <mapsource-defaults version="8.2">
+    <style>
+      <style-rule element="map-layer">
+        <format attr="enabled" id="World_Reference_Overlay" value="false" />
+        <format attr="enabled" id="World_Physical_Map" value="false" />
+        <format attr="enabled" id="World_Street_Map" value="true" />
+        <format attr="enabled" id="World_Dark_Gray_Reference" value="false" />
+        <format attr="enabled" id="World_Dark_Gray_Base" value="false" />
+        <format attr="enabled" id="World_Imagery" value="false" />
+      </style-rule>
+      <style-rule element="map">
+        <format attr="washout" value="0.0" />
+      </style-rule>
+    </style>
+  </mapsource-defaults>
+  <map-attribution copyright-string="Wonderful Orchards" copyright-url="http://www.wonderfulorchards.com"/>
+</mapsource>
