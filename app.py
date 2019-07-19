@@ -17,9 +17,9 @@ class getImage(Resource):
         print(request.headers)
         
         coords = args['coord'].split(',')
-        Zarg = coords[0].encode("ascii")
-        Yarg = coords[1].encode("ascii")
-        Xarg = coords[2].encode("ascii")
+        Zarg = str(coords[0]) #.encode("ascii")
+        Yarg = str(coords[1]) #.encode("ascii")
+        Xarg = str(coords[2]) #.encode("ascii")
         
         outImg = Image.new('RGBA', (256, 256), (255, 0, 0, 0))
 
