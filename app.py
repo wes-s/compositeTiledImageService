@@ -25,8 +25,9 @@ class getImage(Resource):
 
         #If there is only one layer selected no need to process the image....just pass the response content directly. May speed up service?
         if(len(layerList) == 1):
-            if '#' in layerList[0]:
-                outImg = Image.new("RGBA", (256,256), layerList[0])
+            if ':' not in layerList[0]:
+                print(layerList[0])
+                outImg = Image.new("RGBA", (256,256), '#'+ layerList[0])
             else:
                 url = 'http://'+layerList[0].replace(':','/')+'/{0}/{1}/{2}'.format(Zarg,Yarg,Xarg)
                 print(url)
@@ -37,8 +38,8 @@ class getImage(Resource):
                     return send_file(BytesIO(response.content), mimetype='image/png')
         else:
             for layer in layerList:
-                if '#' in layer:
-                        newLayer = Image.new("RGBA", (256,256), layer)
+                if ':' not in layer:
+                        newLayer = Image.new("RGBA", (256,256),  '#'+layer)
                         outImg = Image.alpha_composite(newLayer,outImg)
                 else:    
                     url = 'http://'+layer.replace(':','/')+'/{0}/{1}/{2}'.format(Zarg,Yarg,Xarg)

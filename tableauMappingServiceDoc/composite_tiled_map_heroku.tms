@@ -9,11 +9,11 @@
     <layer display-name="World Dark Gray Reference"         name="World_Dark_Gray_Reference"      show-ui="true" type="features" request-string="services.arcgisonline.com:arcgis:rest:services:Canvas:World_Dark_Gray_Reference:MapServer:tile" />
     <layer display-name="World Dark Gray Base"              name="World_Dark_Gray_Base"           show-ui="true" type="features" request-string="services.arcgisonline.com:arcgis:rest:services:Canvas:World_Dark_Gray_Base:MapServer:tile" />
     <layer display-name="World Imagery"                     name="World_Imagery"                  show-ui="true" type="features" request-string="services.arcgisonline.com:arcGIS:rest:services:World_Imagery:MapServer:tile" />
-    <layer display-name="Light Gray"                        name="Light Gray"                     show-ui="true" type="features" request-string="#DADADB" />
-    <layer display-name="Dark Gray"                         name="Medium Gray"                    show-ui="true" type="features" request-string="#999999" />
-    <layer display-name="Dark Gray"                         name="Dark_Gray"                      show-ui="true" type="features" request-string="#616161" />
-    <layer display-name="Dusty Tan"                         name="Dusty_Tan"                      show-ui="true" type="features" request-string="#c1d9c8" />
-    <layer display-name="Dusty Green"                       name="Dusty_Green"                    show-ui="true" type="features" request-string="#d9d4c1" />
+    <layer display-name="Light Gray"                       name="Light_Gray"                    show-ui="true" type="features" request-string="DADADB" />
+    <layer display-name="Medium Gray"                      name="Medium_Gray"                   show-ui="true" type="features" request-string="999999" />
+    <layer display-name="Dark Gray"                        name="Dark_Gray"                     show-ui="true" type="features" request-string="616161" />
+    <layer display-name="Dusty Green"                      name="Dusty_Green"                   show-ui="true" type="features" request-string="c1d9c8" />
+    <layer display-name="Dusty Tan"                        name="Dusty_Tan"                     show-ui="true" type="features" request-string="d9d4c1" />
   </layers>
   <properties />
   <mapsource-defaults version="8.2">
@@ -26,11 +26,11 @@
         <format attr="enabled" id="World_Dark_Gray_Reference" value="false" />
         <format attr="enabled" id="World_Dark_Gray_Base" value="false" />
         <format attr="enabled" id="World_Imagery" value="false" />
-        <format attr="enabled" id="Light Gray" value="false" />
-        <format attr="enabled" id="Medium Gray" value="false" />
-        <format attr="enabled" id="Dark Gray" value="false" />
-        <format attr="enabled" id="Dusty Tan" value="false" />
-        <format attr="enabled" id="Dusty Green" value="false" />
+        <format attr="enabled" id="Light_Gray" value="false" />
+        <format attr="enabled" id="Medium_Gray" value="false" />
+        <format attr="enabled" id="Dark_Gray" value="false" />
+        <format attr="enabled" id="Dusty_Green" value="false" />
+        <format attr="enabled" id="Dusty_Tan" value="false" />
       </style-rule>
       <style-rule element="map">
         <format attr="washout" value="0.0" />
