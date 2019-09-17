@@ -37,7 +37,7 @@ class getImage(Resource):
                     return send_file(BytesIO(response.content), mimetype='image/png')
         else:
             for layer in layerList:
-                if '#' in layerList[0]:
+                if '#' in layer:
                         newLayer = Image.new("RGBA", (256,256), layer)
                         outImg = Image.alpha_composite(newLayer,outImg)
                 else:    
