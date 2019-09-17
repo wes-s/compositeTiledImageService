@@ -2,36 +2,35 @@
 <mapsource inline="true" version="8.2">
   <connection api-version="2" class="OpenStreetMap" indicator-server='https://composite-tiled-map-services.herokuapp.com' layer-separator="," max-stretch="1.2" min-shrink="0.667" offline="" port="443" server='https://composite-tiled-map-services.herokuapp.com' url-format='/getImage/{L}?coord={Z},{Y},{X}'/>
   <layers>
-    <layer display-name="World Reference Overlay"          name="World_Reference_Overlay"       show-ui="true" type="features" request-string="services.arcgisonline.com:arcgis:rest:services:Reference:World_Reference_Overlay:MapServer:tile" />
-    <layer display-name="World Boundaries and Places"      name="World_Boundaries_and_Places"   show-ui="true" type="features" request-string="services.arcgisonline.com:arcgis:rest:services:Reference:World_Boundaries_and_Places:MapServer:tile" />
-    <layer display-name="World Transportation"             name="World_Transportation"          show-ui="true" type="features" request-string="services.arcgisonline.com:arcgis:rest:services:Reference:World_Transportation:MapServer:tile" />
-    <layer display-name="NatGeo World Map"                 name="NatGeo_World_Map"              show-ui="true" type="features" request-string="services.arcgisonline.com:arcgis:rest:services:NatGeo_World_Map:MapServer:tile" />
-    <layer display-name="World Topo Map"                   name="World_Topo_Map"                show-ui="true" type="features" request-string="services.arcgisonline.com:arcgis:rest:services:World_Topo_Map:MapServer:tile" />
-    <layer display-name="USA Topo Map"                     name="USA_Topo_Maps"                 show-ui="true" type="features" request-string="services.arcgisonline.com:arcgis:rest:services:USA_Topo_Maps:MapServer:tile" />
-    <layer display-name="World Street Map"                 name="World_Street_Map"              show-ui="true" type="features" request-string="services.arcgisonline.com:arcgis:rest:services:World_Street_Map:MapServer:tile" />
-    <layer display-name="World Dark Gray Reference"        name="World_Dark_Gray_Reference"     show-ui="true" type="features" request-string="services.arcgisonline.com:arcgis:rest:services:Canvas:World_Dark_Gray_Reference:MapServer:tile" />
-    <layer display-name="World Dark Gray Base"             name="World_Dark_Gray_Base"          show-ui="true" type="features" request-string="services.arcgisonline.com:arcgis:rest:services:Canvas:World_Dark_Gray_Base:MapServer:tile" />
-    <layer display-name="World Light Gray Reference"       name="World_Light_Gray_Reference"    show-ui="true" type="features" request-string="services.arcgisonline.com:arcgis:rest:services:Canvas:World_Light_Gray_Reference:MapServer:tile" />
-    <layer display-name="World Light Gray Base"            name="World_Light_Gray_Base"         show-ui="true" type="features" request-string="services.arcgisonline.com:arcgis:rest:services:Canvas:World_Light_Gray_Base:MapServer:tile" />
-    <layer display-name="World Imagery"                    name="World_Imagery"                 show-ui="true" type="features" request-string="services.arcgisonline.com:arcGIS:rest:services:World_Imagery:MapServer:tile" />
-
+    <layer display-name="World Reference Overlay"           name="World_Reference_Overlay"        show-ui="true" type="features" request-string="services.arcgisonline.com:arcgis:rest:services:Reference:World_Reference_Overlay:MapServer:tile" />
+    <layer display-name="World Street Map"                  name="World_Street_Map"               show-ui="true" type="features" request-string="services.arcgisonline.com:arcgis:rest:services:World_Street_Map:MapServer:tile" />
+    <layer display-name="World Light Gray Reference"        name="World_Light_Gray_Reference"     show-ui="true" type="features" request-string="services.arcgisonline.com:arcgis:rest:services:Canvas:World_Light_Gray_Reference:MapServer:tile" />
+    <layer display-name="World Light Gray Base"             name="World_Light_Gray_Base"          show-ui="true" type="features" request-string="services.arcgisonline.com:arcgis:rest:services:Canvas:World_Light_Gray_Base:MapServer:tile" />
+    <layer display-name="World Dark Gray Reference"         name="World_Dark_Gray_Reference"      show-ui="true" type="features" request-string="services.arcgisonline.com:arcgis:rest:services:Canvas:World_Dark_Gray_Reference:MapServer:tile" />
+    <layer display-name="World Dark Gray Base"              name="World_Dark_Gray_Base"           show-ui="true" type="features" request-string="services.arcgisonline.com:arcgis:rest:services:Canvas:World_Dark_Gray_Base:MapServer:tile" />
+    <layer display-name="World Imagery"                     name="World_Imagery"                  show-ui="true" type="features" request-string="services.arcgisonline.com:arcGIS:rest:services:World_Imagery:MapServer:tile" />
+    <layer display-name="Light Gray"                        name="Light Gray"                     show-ui="true" type="features" request-string="#DADADB" />
+    <layer display-name="Dark Gray"                         name="Medium Gray"                    show-ui="true" type="features" request-string="#999999" />
+    <layer display-name="Dark Gray"                         name="Dark_Gray"                      show-ui="true" type="features" request-string="#616161" />
+    <layer display-name="Dusty Tan"                         name="Dusty_Tan"                      show-ui="true" type="features" request-string="#c1d9c8" />
+    <layer display-name="Dusty Green"                       name="Dusty_Green"                    show-ui="true" type="features" request-string="#d9d4c1" />
   </layers>
   <properties />
   <mapsource-defaults version="8.2">
     <style>
       <style-rule element="map-layer">
         <format attr="enabled" id="World_Reference_Overlay" value="false" />
-        <format attr="enabled" id="World_Boundaries_and_Places" value="false" />
-        <format attr="enabled" id="World_Transportation" value="false" />
-        <format attr="enabled" id="NatGeo_World_Map" value="false" />
-        <format attr="enabled" id="World_Topo_Map" value="false" />
-        <format attr="enabled" id="USA_Topo_Maps" value="false" />
-        <format attr="enabled" id="World_Street_Map" value="true" />
-        <format attr="enabled" id="World_Dark_Gray_Reference" value="false" />
-        <format attr="enabled" id="World_Dark_Gray_Base" value="false" />        
+        <format attr="enabled" id="World_Street_Map" value="false" />
         <format attr="enabled" id="World_Light_Gray_Reference" value="false" />
-        <format attr="enabled" id="World_Light_Gray_Base" value="false" />
+        <format attr="enabled" id="World_Light_Gray_Base" value="true" />
+        <format attr="enabled" id="World_Dark_Gray_Reference" value="false" />
+        <format attr="enabled" id="World_Dark_Gray_Base" value="false" />
         <format attr="enabled" id="World_Imagery" value="false" />
+        <format attr="enabled" id="Light Gray" value="false" />
+        <format attr="enabled" id="Medium Gray" value="false" />
+        <format attr="enabled" id="Dark Gray" value="false" />
+        <format attr="enabled" id="Dusty Tan" value="false" />
+        <format attr="enabled" id="Dusty Green" value="false" />
       </style-rule>
       <style-rule element="map">
         <format attr="washout" value="0.0" />

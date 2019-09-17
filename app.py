@@ -25,22 +25,29 @@ class getImage(Resource):
 
         #If there is only one layer selected no need to process the image....just pass the response content directly. May speed up service?
         if(len(layerList) == 1):
-            url = 'http://'+layerList[0].replace(':','/')+'/{0}/{1}/{2}'.format(Zarg,Yarg,Xarg)
-            print(url)
-            response = requests.get(url)
-            print(response)
-            if(response):
-                # if no response this return will not happen. return outside if statement will return stream of empty Out image instantiated above
-                return send_file(BytesIO(response.content), mimetype='image/png')
-        else:
-            for layer in layerList:
-                url = 'http://'+layer.replace(':','/')+'/{0}/{1}/{2}'.format(Zarg,Yarg,Xarg)
+            if '#' in layerList[0]:
+                outImg = Image.new("RGBA", (256,256), layerList[0])
+            else:
+                url = 'http://'+layerList[0].replace(':','/')+'/{0}/{1}/{2}'.format(Zarg,Yarg,Xarg)
                 print(url)
                 response = requests.get(url)
+                print(response)
                 if(response):
-                    # if there is not a response in this itteration of the loop this will not composite anything onto the current state of outImg.
-                    newLayer = Image.open(BytesIO(response.content)).convert('RGBA')
-                    outImg = Image.alpha_composite(newLayer,outImg)
+                    # if no response this return will not happen. return outside if statement will return stream of empty Out image instantiated above
+                    return send_file(BytesIO(response.content), mimetype='image/png')
+        else:
+            for layer in layerList:
+                if '#' in layerList[0]:
+                        newLayer = Image.new("RGBA", (256,256), layer)
+                        outImg = Image.alpha_composite(newLayer,outImg)
+                else:    
+                    url = 'http://'+layer.replace(':','/')+'/{0}/{1}/{2}'.format(Zarg,Yarg,Xarg)
+                    print(url)
+                    response = requests.get(url)
+                    if(response):
+                        # if there is not a response in this itteration of the loop this will not composite anything onto the current state of outImg.
+                        newLayer = Image.open(BytesIO(response.content)).convert('RGBA')
+                        outImg = Image.alpha_composite(newLayer,outImg)
 
         imgByteArr = BytesIO()
         outImg.save(imgByteArr, format='PNG')
