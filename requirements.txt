@@ -3,4 +3,4 @@ Flask-RESTful==0.3.7
 gunicorn==19.9.0
 Werkzeug==2.2.3
 Pillow==8.4.0
-requests==2.21.0
+requests==2.31.0
